@@ -4,7 +4,7 @@ import axios from 'axios'
 export const checkAuth = createAsyncThunk(
     'auth/checkAuth',
     async (data) => {
-      const response = await axios.post("http://localhost:5000/login",data)
+      const response = await axios.post("http://35.180.202.199/login",data)
       return response.data
     }
   )
