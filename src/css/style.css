@@ -226,7 +226,6 @@ a .summary-card__content {
 @media screen and (max-width: 1000px) {
   .container {
     width: 100%;
-    padding: 0 20px;
   }
 }
 
@@ -266,7 +265,6 @@ a .summary-card__content {
   margin-top: 150px;
 }
 .nav {
-  overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -303,8 +301,8 @@ a .summary-card__content {
   transform: translateX(100%);
 }
 .nav .inner-links {
-  padding: 20px;
   display: grid;
+  padding: 20px 0;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
   align-items: center;
