@@ -196,7 +196,7 @@ a .summary-card__content {
 }
 
 .report-section {
-  margin-top: 20px;
+  padding-top: 20px;
   width: 95%;
   margin: auto;
   justify-content: center;
