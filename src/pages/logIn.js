@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import InputGroup from "../components/inputGroup"
 import {checkAuth } from "./../reducers/auth/checkAuth"
 import { Navigate } from "react-router-dom"
-import { setError } from "../reducers/auth/auth"
+import { loginUser, setError } from "../reducers/auth/auth"
 const Login = ()=>{
 
     const dispatch = useDispatch()
@@ -17,12 +17,12 @@ const Login = ()=>{
     var name = e.target.name.value
     var password = e.target.password.value
     if(name !== "" && password !== "" ){
-        dispatch(checkAuth({name,password}))
+        //dispatch(checkAuth({name,password}))
+        dispatch(loginUser({name,password}))
     }else{
         dispatch(setError())
     }
 }
-console.log(LogedIn)
 if(LogedIn){
     return <Navigate to="/admin"/>
 }

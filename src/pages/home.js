@@ -2,21 +2,24 @@ import { useEffect } from 'react';
 import { useDispatch ,useSelector} from 'react-redux';
 import { getArticles } from '../reducers/articles/getArticles';
 import { Link } from 'react-router-dom';
+import {data} from "../data"
 const Home = ()=>{
-  const dispatch = useDispatch()
-useEffect(()=>{
-  dispatch(getArticles())
-},[])
-const articlesState = useSelector((state)=>{
-  return state.Articles.data
-})
+//   const dispatch = useDispatch()
+
+// useEffect(()=>{
+//   dispatch(getArticles())
+// },[])
+
+// const articlesState = useSelector((state)=>{
+//   return state.Articles.data
+// })
 
 var article ;
-if(articlesState){
-  article = articlesState.map((item )=>{
+if(data){
+  article = data.map((item,index )=>{
     return(
       
-      <div className='summary-card'>
+      <div key={index} className='summary-card'>
         <Link to={`/article/${item.Aid}`} state={{data:item}}>
         <div className='summary-card__title'>{item.title}</div>
         <div className='summary-card__content'>{String(item.content).slice(0,30)}</div>

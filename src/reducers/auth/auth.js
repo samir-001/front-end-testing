@@ -11,6 +11,17 @@ export const Auth = createSlice({
   reducers: {
     logout(state,actions){
       state.login = false
+      sessionStorage.removeItem("token")
+    },
+    loginUser(state,actions){
+      if (actions.payload.name=="samir",actions.payload.password =="123"){
+        state.login = true;
+        state.err = "";
+        sessionStorage.setItem('token', "5456465465", 3000);
+
+      }else{
+        state.err = "بيانات غير صحيحه"
+      }
     },
     setError(state,action){
       state.err = "بيانات غير صحيحه"
@@ -39,5 +50,5 @@ export const Auth = createSlice({
 
 
 // Action creators are generated for each case reducer function
-export const {logout,setError}  = Auth.actions
+export const {logout,setError ,loginUser}  = Auth.actions
 export default Auth.reducer

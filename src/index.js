@@ -17,7 +17,6 @@ import ArtilcesControl from "./pages/artilcesControl"
 
 const router = createBrowserRouter([
 
-
   { 
     path: "/",
     element: <App/>,
@@ -59,7 +58,7 @@ const router = createBrowserRouter([
           
           {
             path:"tags",
-            element:<Table  ></Table>
+            element:<Table></Table>
           },
           {
             path:"comments",

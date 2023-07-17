@@ -1,11 +1,12 @@
 import { useState } from "react"
 import { useSelector ,useDispatch } from "react-redux";
-import { Link } from 'react-router-dom';
+import { Link, redirect  } from 'react-router-dom';
 import { logout } from "../reducers/auth/auth";
 const Nav = ()=>{
 const [isOpen, Navtoggler] =  useState(false) 
 
 const dispatch = useDispatch()
+const login = useSelector((state)=>state.Auth.login)
     return(
         <div className='nav'>
             <div className="container">
@@ -18,12 +19,11 @@ const dispatch = useDispatch()
                     </div>
                 </Link>
 
-                {/* <div className='logo' onClick={()=>{
-                    sessionStorage.removeItem("token")
-                        dispatch(logout())
-                }}>logout </div> */}
                 <div style={{display:"flex",color:"white",alignItems:"center"}}>
+
+             
                     <Link to="/admin"> admin </Link>
+                    {!login ?<Link style = {{marginLeft:"10px"}}  to="/login"> login </Link>:<a style = {{marginLeft:"10px"}}  onClick={()=> { dispatch(logout())}}> logout </a>}
                 <div style={{marginLeft:"20px"}} className='link-button' onClick={()=>{
                     Navtoggler((open)=>{
                         return !open

@@ -2,14 +2,15 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getArticles } from "../reducers/articles/getArticles"
 import ArticleCard from "../components/articleCard"
+import {data} from "../data"
 const ArtilcesControl = ()=>{
-    const data = useSelector((state)=>state.Articles.data)
-    const dispatch = useDispatch()
-    useEffect(()=>{
-        dispatch(getArticles())
-    },[])
+    // const data = useSelector((state)=>state.Articles.data)
+    // const dispatch = useDispatch()
+    // useEffect(()=>{
+    //     dispatch(getArticles())
+    // },[])
         
-  console.log(data)
+
     const requests = data.map((item ,index)=>{
         return(
             <div key={index} >
