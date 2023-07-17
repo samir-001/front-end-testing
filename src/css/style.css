@@ -197,7 +197,8 @@ a .summary-card__content {
 
 .report-section {
   margin-top: 20px;
-  width: 100%;
+  width: 95%;
+  margin: auto;
   justify-content: center;
   display: grid;
   gap: 20px;
@@ -272,6 +273,7 @@ a .summary-card__content {
   height: 60px;
   background-color: #3AA6B9;
   z-index: 999;
+  padding-left: 30px;
 }
 .nav .navContent {
   display: flex;
