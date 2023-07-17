@@ -266,7 +266,7 @@ a .summary-card__content {
   margin-top: 150px;
 }
 .nav {
-  transition: all 1s ease-in-out;
+  overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;

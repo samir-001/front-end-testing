@@ -1,7 +1,8 @@
 
 
 .nav{
-    transition: all 1s ease-in-out;
+
+    overflow: hidden;
     .navContent{
         display: flex;
         justify-content: space-between;
