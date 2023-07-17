@@ -4,6 +4,8 @@
   height: 150px;
   border-radius: 22px;
   color: black;
+  position: relative;
+  padding-bottom: 25px;
 }
 a .summary-card__title {
   padding: 10px;
@@ -20,8 +22,13 @@ a .summary-card__content {
   padding: 10px;
   color: black;
 }
-a .summary-card__like {
-  color: black;
+.summary-card__like {
+  background-color: black;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 5px;
+  left: 15px;
 }
 .article-card {
   padding: 20px;
@@ -174,7 +181,6 @@ a .summary-card__like {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
   color: white;
   overflow: hidden;
 }
@@ -195,12 +201,33 @@ a .summary-card__like {
   justify-content: center;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width: 1220px) {
+  .report-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 900px) {
+  .report-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .report-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .container {
   width: 80%;
   margin: auto;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 
 .test {
@@ -222,6 +249,12 @@ a .summary-card__like {
   font-weight: bold;
   margin: 20px 0;
 }
+@media screen and (max-width: 1000px) {
+  .article-view {
+    width: 90%;
+    position: relative;
+  }
+}
 
 .logIn-page {
   display: flex;
@@ -233,6 +266,7 @@ a .summary-card__like {
   margin-top: 150px;
 }
 .nav {
+  transition: all 1s ease-in-out;
   position: fixed;
   top: 0;
   left: 0;
@@ -251,19 +285,22 @@ a .summary-card__like {
   align-items: center;
   color: white;
   height: 60px;
+  margin-left: 0px;
 }
 .nav .link-button {
   width: 120px;
   height: 60px;
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .nav .links {
   display: none;
-  position: absolute;
-  top: 60px;
+  position: relative;
   background-color: rgba(58, 166, 185, 0.6705882353);
-  height: 200px;
   width: 100%;
+  transform: translateX(100%);
 }
 .nav .inner-links {
   padding: 20px;
@@ -274,14 +311,29 @@ a .summary-card__like {
   width: 70%;
   margin: auto;
 }
+@media screen and (max-width: 1000px) {
+  .nav .inner-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .nav .open {
   display: block;
+  transform: translateX(0%);
 }
 .nav .link {
   padding: 10px;
   text-align: center;
   font-weight: bold;
   color: white;
+}
+
+.dash {
+  width: 30px;
+  height: 4px;
+  margin-bottom: 4px;
+  background-color: aqua;
 }
 .search-engine {
   display: flex;

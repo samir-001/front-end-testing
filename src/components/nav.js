@@ -14,22 +14,20 @@ const login = useSelector((state)=>state.Auth.login)
          
                 <Link to="/home">
                     <div className='logo'>
-                    
                     مركز بحوث 
                     </div>
                 </Link>
 
                 <div style={{display:"flex",color:"white",alignItems:"center"}}>
 
-             
+{/*              
                     <Link to="/admin"> admin </Link>
-                    {!login ?<Link style = {{marginLeft:"10px"}}  to="/login"> login </Link>:<a style = {{marginLeft:"10px"}}  onClick={()=> { dispatch(logout())}}> logout </a>}
-                <div style={{marginLeft:"20px"}} className='link-button' onClick={()=>{
-                    Navtoggler((open)=>{
-                        return !open
-                    })
-                    
-                }}></div>
+                    {!login ?<Link style = {{marginLeft:"10px"}}  to="/login"> login </Link>:<a style = {{marginLeft:"10px"}}  onClick={()=> { dispatch(logout())}}> logout </a>} */}
+                <div className='link-button' onClick={()=>{Navtoggler((open)=> !open)}}>
+                    <div className="dash"></div>
+                    <div className="dash"></div>
+                    <div className="dash"></div>
+                </div>
                 </div>
                 </div>
         </div>

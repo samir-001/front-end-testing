@@ -23,8 +23,8 @@ if(data){
         <Link to={`/article/${item.Aid}`} state={{data:item}}>
         <div className='summary-card__title'>{item.title}</div>
         <div className='summary-card__content'>{String(item.content).slice(0,30)}</div>
-        
       </Link>
+        <div className='summary-card__like'></div>
       </div>
     )
   })
