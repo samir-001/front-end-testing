@@ -333,7 +333,6 @@ a .summary-card__content {
   height: 60px;
   background-color: #3AA6B9;
   z-index: 999;
-  padding-left: 30px;
 }
 .nav .navContent {
   display: flex;
@@ -345,7 +344,7 @@ a .summary-card__content {
   align-items: center;
   color: white;
   height: 60px;
-  margin-left: 0px;
+  padding-left: 30px;
 }
 .nav .link-button {
   width: 120px;
@@ -368,7 +367,6 @@ a .summary-card__content {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
   align-items: center;
-  width: 70%;
   margin: auto;
 }
 @media screen and (max-width: 1000px) {
