@@ -6,6 +6,7 @@
   color: black;
   position: relative;
   padding-bottom: 25px;
+  text-align: center;
 }
 a .summary-card__title {
   padding: 10px;
@@ -22,13 +23,16 @@ a .summary-card__content {
   padding: 10px;
   color: black;
 }
-.summary-card__like {
-  background-color: black;
-  position: absolute;
-  width: 20px;
-  height: 20px;
+.summary-card__meta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
   bottom: 5px;
-  left: 15px;
+}
+.summary-card__meta div {
+  margin: 10px;
 }
 .article-card {
   padding: 20px;
@@ -345,7 +349,7 @@ a .summary-card__content {
 }
 
 .search {
-  width: 500px;
+  max-width: 500px;
   height: 32px;
   padding: 6px 12px;
   border: 1px solid #ccc;
