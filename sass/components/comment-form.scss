@@ -1,0 +1,35 @@
+.comment-form{
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    justify-content: center;
+    &__element{
+        border: 1px solid lightgray;
+        width: 100%;
+        border-radius: 8px;
+        display: block;
+        outline: none;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        direction: rtl;
+        padding:8px ;
+        box-sizing: border-box;
+        &:focus{
+            border: 1px solid rgb(160, 159, 159);
+
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .comment-badge{
+        display: inline-block;
+        padding: 5px;
+        border-radius: 7px;
+        border: 1px solid lightskyblue;
+        color: lightblue;
+        margin: 2px;
+      }
+}

@@ -46,7 +46,7 @@
 
 }
 .article-view{
-    width: 50%;
+    width: 70%;
     margin:150px auto;
     text-align: right;
 
@@ -69,15 +69,23 @@
     text-align: right;
     margin-top:150px;
 }
-.comment-form{
-  display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: right;
-}
+
 .article-view__comments{
-  height: 150px;
-  margin-top: 20px;
+  margin-top:20px;
+  margin-bottom: 120px;
+}
+.centered-title{
+  display: block;
+  margin: auto;
+  font-size: 18px;
+  text-align: center;
+}
+.advertising{
+  width: 100%;
+  max-width:350px ;
+  background-color: rgb(247, 247, 247);
+  height: 350px;
+  margin: auto;
+  margin-top: 30px;
+
 }

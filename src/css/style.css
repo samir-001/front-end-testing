@@ -5,7 +5,6 @@
   border-radius: 22px;
   color: black;
   position: relative;
-  padding-bottom: 25px;
   text-align: center;
 }
 a .summary-card__title {
@@ -159,6 +158,42 @@ a .summary-card__content {
   align-items: center;
   font-size: 14px;
 }
+.comment-form {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+  justify-content: center;
+}
+.comment-form__element {
+  border: 1px solid lightgray;
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  outline: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  direction: rtl;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.comment-form__element:focus {
+  border: 1px solid rgb(160, 159, 159);
+}
+@media screen and (max-width: 1000px) {
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.comment-form .comment-badge {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 7px;
+  border: 1px solid lightskyblue;
+  color: lightblue;
+  margin: 2px;
+}
 .input-group {
   position: relative;
 }
@@ -245,7 +280,7 @@ a .summary-card__content {
 }
 
 .article-view {
-  width: 50%;
+  width: 70%;
   margin: 150px auto;
   text-align: right;
 }
@@ -270,18 +305,25 @@ a .summary-card__content {
   margin-top: 150px;
 }
 
-.comment-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-align: right;
+.article-view__comments {
+  margin-top: 20px;
+  margin-bottom: 120px;
 }
 
-.article-view__comments {
-  height: 150px;
-  margin-top: 20px;
+.centered-title {
+  display: block;
+  margin: auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+.advertising {
+  width: 100%;
+  max-width: 350px;
+  background-color: rgb(247, 247, 247);
+  height: 350px;
+  margin: auto;
+  margin-top: 30px;
 }
 .nav {
   position: fixed;
@@ -512,6 +554,7 @@ a .dashBoard__nav-bar__link {
 }
 
 .form-btn {
+  margin: auto;
   font-weight: bold;
   padding: 7px 10px;
   border-radius: 5px;

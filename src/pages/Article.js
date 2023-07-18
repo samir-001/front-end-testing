@@ -12,9 +12,11 @@ const data = Location.state.data
                     <div className="article-view__title">
                         {data.title}
                     </div>
-                <div>
+                <div style={{marginBottom:"30px"}}>
                     {data.content}
                 </div>
+                <h3 className="centered-title">إعلان</h3>
+                <div className="advertising"></div>
                 <div className="article-view__comments">
                     <h4>التعليقات</h4>
                 </div>
