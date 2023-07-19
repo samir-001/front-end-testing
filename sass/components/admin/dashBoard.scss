@@ -1,10 +1,15 @@
 .dashBoard{
-    height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row; 
+    background-color: #f7fcff;
+    @media screen and (max-width:1200px) {
+        flex-direction: column;
+    }
+
   
     &__nav-bar{
+
         position: fixed;
         top:0;
         right: 0;
@@ -16,10 +21,42 @@
         align-items: center;
         padding-top: 60px;
         height: 100%;
+        @media screen and (max-width:1200px) {
+            height: 100%;
+            flex-direction: row-reverse;
+            overflow-x: scroll;
+            justify-content: center;
+            align-items: center;
+            
+         
+        
+       
+        }
+
+        @media screen and (max-width:1200px) {
+            position: static;
+            height: 10%;
+            width:100%;
+        }
+        &__logo{
+            width:200px;
+            height:200px;
+            background-size:cover;
+            @media screen and (max-width:1200px) {
+                display: none;
+            }
+        }
+
         a{
+        
             text-align: center;
             display: block;
             width: 100%;
+            @media screen and (max-width:1200px) {
+                display: inline-block;
+                width: auto;
+                color: black;
+            }
         }
         a &__link{
             text-align: center;
@@ -33,7 +70,6 @@
     }
     &__content{
         position: relative;
-        right: 20%;
         display: flex;
         flex-direction: column;
         padding-top:100px;
@@ -44,30 +80,56 @@
         box-sizing: border-box;
         text-align: right;
         background-color: #f7fcff;
-        
+        @media screen and (max-width:1200px) {
+           margin: auto;
+        }
+
     }
 
     .statistic{
+        width: 100%;
         display: flex;
         flex-direction: column;
        &__content{
+            width: 100%;
             display: grid;
+            gap: 30px;
             grid-template-columns: repeat(4,1fr);
-            gap: 10px;  
             direction: rtl;
+            @media screen and (max-width:1200px) {
+                grid-template-columns: repeat(3,1fr);
+            }
+            @media screen and (max-width:800px) {
+                grid-template-columns: repeat(2,1fr);
+            }
+            @media screen and (max-width:600px) {
+                grid-template-columns: repeat(1,1fr);
+            }
 
         }
     }
 
 }
 .main-dash-board{
+    width: 90%;
     display: flex;
     flex-direction: column;
     
 
 }
 .global-statistic{
+    gap: 30px;
     display: grid;
     grid-template-columns: repeat(1fr,4);
     padding:10px;
+    @media screen and (max-width:1200px) {
+        grid-template-columns: repeat(3,1fr);
+    }
+    @media screen and (max-width:800px) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media screen and (max-width:600px) {
+        grid-template-columns: repeat(1,1fr);
+    }
+
 }

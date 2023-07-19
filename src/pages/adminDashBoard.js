@@ -1,6 +1,7 @@
 import { Navigate, useLocation } from "react-router-dom"
 import { Link, Outlet } from "react-router-dom"
 import { useSelector } from "react-redux"
+import FormModal from "../components/formModal"
 const AdminDashboard  = ()=>{
     const location = useLocation()
     const login = useSelector((state)=>state.Auth.login)
@@ -9,11 +10,15 @@ const AdminDashboard  = ()=>{
         return <Navigate to="/login"></Navigate>
     }
     return(
+        <>
         <div className="dashBoard">
-            <div className="dashBoard__nav-bar">
-                <div style={{width:"200px",height:"200px",backgroundImage:'url("./../../magnify.png")',backgroundSize:"cover",}}>
+
+
+            <div className="dashBoard__nav-bar">  
+                <div style={{backgroundImage:'url("./../../magnify.png")'}} className="dashBoard__nav-bar__logo">
 
                 </div>
+
                 <Link to="" >
 
                 <div className="dashBoard__nav-bar__link">الرئسية</div>
@@ -36,10 +41,10 @@ const AdminDashboard  = ()=>{
                 </Link>
             </div>
             <div className="dashBoard__content">
-
                 <Outlet></Outlet>
             </div>
         </div>
+        </>
     )
 }
 export default AdminDashboard

@@ -1,22 +1,23 @@
 .badge{
-
     display: flex;
     padding: 5px 7px;
     color:#3AA6B9;
-    margin: 10px;
     flex-direction:row;
-    width: 250px;
     align-items: center;
     border-radius: 5px;
-    height: 80px;
     background-color: white;
     border:1px solid #78C1F3;
     backdrop-filter: blur(5px);
+    box-sizing: border-box;
     
     &__icon{
-        width: 30%;
+        width: 80px;
         height: 90%;
         border-radius: 5px;
+    
+        @media screen  and (max-width: 1200px) {
+            display: none;
+        }
 
         
     }
@@ -36,7 +37,9 @@
     }
     &__text{
         font-size: 16px;
-        padding: 5px 10px ;
+        padding: 15px 10px ;
+
+
     }
 }
 

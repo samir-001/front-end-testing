@@ -1,10 +1,12 @@
 import { useLocation } from "react-router-dom"
+import FormModal from "../components/formModal"
 
 const Table = ()=>{
 const location = useLocation()
 
 return(
         <>
+      <FormModal location= {location}/>
        <table>
   <thead>
     <tr>

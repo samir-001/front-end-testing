@@ -65,20 +65,23 @@ a .summary-card__content {
   display: flex;
   padding: 5px 7px;
   color: #3AA6B9;
-  margin: 10px;
   flex-direction: row;
-  width: 250px;
   align-items: center;
   border-radius: 5px;
-  height: 80px;
   background-color: white;
   border: 1px solid #78C1F3;
   backdrop-filter: blur(5px);
+  box-sizing: border-box;
 }
 .badge__icon {
-  width: 30%;
+  width: 80px;
   height: 90%;
   border-radius: 5px;
+}
+@media screen and (max-width: 1200px) {
+  .badge__icon {
+    display: none;
+  }
 }
 .badge__content {
   display: flex;
@@ -94,7 +97,7 @@ a .summary-card__content {
 }
 .badge__text {
   font-size: 16px;
-  padding: 5px 10px;
+  padding: 15px 10px;
 }
 
 .sky-color {
@@ -305,7 +308,7 @@ a .summary-card__content {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   text-align: right;
   margin-top: 150px;
 }
@@ -329,6 +332,26 @@ a .summary-card__content {
   height: 350px;
   margin: auto;
   margin-top: 30px;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.322);
+}
+
+.add-Form {
+  padding: 30px;
+  border-radius: 12px;
+  background-color: white;
+  width: 350px;
 }
 .nav {
   position: fixed;
@@ -453,10 +476,15 @@ td.content, th.content {
   width: 60%;
 }
 .dashBoard {
-  height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  background-color: #f7fcff;
+}
+@media screen and (max-width: 1200px) {
+  .dashBoard {
+    flex-direction: column;
+  }
 }
 .dashBoard__nav-bar {
   position: fixed;
@@ -471,10 +499,43 @@ td.content, th.content {
   padding-top: 60px;
   height: 100%;
 }
+@media screen and (max-width: 1200px) {
+  .dashBoard__nav-bar {
+    height: 100%;
+    flex-direction: row-reverse;
+    overflow-x: scroll;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .dashBoard__nav-bar {
+    position: static;
+    height: 10%;
+    width: 100%;
+  }
+}
+.dashBoard__nav-bar__logo {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+@media screen and (max-width: 1200px) {
+  .dashBoard__nav-bar__logo {
+    display: none;
+  }
+}
 .dashBoard__nav-bar a {
   text-align: center;
   display: block;
   width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .dashBoard__nav-bar a {
+    display: inline-block;
+    width: auto;
+    color: black;
+  }
 }
 a .dashBoard__nav-bar__link {
   text-align: center;
@@ -486,7 +547,6 @@ a .dashBoard__nav-bar__link {
 }
 .dashBoard__content {
   position: relative;
-  right: 20%;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -498,26 +558,65 @@ a .dashBoard__nav-bar__link {
   text-align: right;
   background-color: #f7fcff;
 }
+@media screen and (max-width: 1200px) {
+  .dashBoard__content {
+    margin: auto;
+  }
+}
 .dashBoard .statistic {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 .dashBoard .statistic__content {
+  width: 100%;
   display: grid;
+  gap: 30px;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
   direction: rtl;
+}
+@media screen and (max-width: 1200px) {
+  .dashBoard .statistic__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 800px) {
+  .dashBoard .statistic__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .dashBoard .statistic__content {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .main-dash-board {
+  width: 90%;
   display: flex;
   flex-direction: column;
 }
 
 .global-statistic {
+  gap: 30px;
   display: grid;
   grid-template-columns: repeat(1fr, 4);
   padding: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .global-statistic {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 800px) {
+  .global-statistic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .global-statistic {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .input-group {
   height: 80px;
