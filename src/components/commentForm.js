@@ -15,9 +15,9 @@ const CommentForm = ()=>{
 
     const handleSubmit = (e)=>{ 
     e.preventDefault()
-    var name = e.target.name.value
-    var password = e.target.comment.value
-    console.log()
+    // var name = e.target.name.value
+    // var password = e.target.comment.value
+    console.log(123)
  
 }
 const commentTags = Object.keys(comments).map((item ,index)=>{

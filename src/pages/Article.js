@@ -1,12 +1,21 @@
 import { useLocation } from "react-router";
 import CommentForm from "../components/commentForm";
+import { useEffect } from "react";
+
 
 const Artilce = (props)=>{
 const Location  = useLocation()
+const {pathname} = useLocation()
+
+useEffect(()=>{
+    window.scrollTo(0,0)
+},[pathname])
+
 const data = Location.state.data
 
         return(
             <>
+
                 <div className="article-view">
                     <div className="container">
                     <div className="article-view__title">

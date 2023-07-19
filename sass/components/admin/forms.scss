@@ -1,6 +1,6 @@
 .input-group{
-  width: 500px;
   height: 80px;
+    width: 350px;
   display: flex;
   flex-direction: column;
     &__element{
@@ -11,7 +11,7 @@
         margin-top: 10px;
         outline: none;
         text-align: right;
-      
+        box-sizing: border-box;
     }
     &__label{
         font-size: 16px;

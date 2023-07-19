@@ -28,7 +28,7 @@ if(LogedIn){
 }
     return(
         <div className="logIn-page">
-        <h1 style={{marginBottom:"20px"}}> تسجيل الدخول</h1>
+        <h3 style={{marginBottom:"20px"}}> تسجيل الدخول</h3>
         {errors ? <p className="text-error">{errors}</p>:""}
         <Formik
         initialValues={{name:"",password:""}}
