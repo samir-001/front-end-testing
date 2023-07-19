@@ -521,7 +521,7 @@ a .dashBoard__nav-bar__link {
 }
 .input-group {
   height: 80px;
-  width: 350px;
+  width: 300px;
   display: flex;
   flex-direction: column;
 }
