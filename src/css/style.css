@@ -677,13 +677,13 @@ a .dashBoard__nav-bar__link {
 
 .form-btn {
   margin: auto;
-  padding: 7px 10px;
+  padding: 5px 7px;
   border-radius: 5px;
   border: none;
   border: 1px solid darkblue;
   color: darkblue;
   background-color: white;
-  font-size: 18px;
+  font-size: 16px;
 }
 .form-btn:hover {
   background-color: darkblue;
