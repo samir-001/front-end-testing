@@ -74,3 +74,18 @@
 
     }
 }
+.add-btn{
+    display: flex;
+    flex-direction:row;
+    padding: 7px;
+    border-radius:7px ;
+    border: 1px solid darkblue;
+    color:darkblue ;
+    background-color: transparent;
+    align-self: flex-end;
+    margin-right: 5%;
+    &:hover{
+        background-color:darkblue;
+        color:white
+    }
+}

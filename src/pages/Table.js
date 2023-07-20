@@ -1,17 +1,26 @@
 import { useLocation } from "react-router-dom"
 import FormModal from "../components/formModal"
+import { useDispatch, useSelector } from "react-redux"
+import { showModal } from "../reducers/global/global"
 
 const Table = ()=>{
+  const dispatch = useDispatch();
 const location = useLocation()
+const isFormModalopned = useSelector((state)=>state.Global.formModal)
+const page = String(location.pathname).split("/")[2]
 
+console.log(isFormModalopned)
 return(
         <>
-      <FormModal location= {location}/>
+      {isFormModalopned ?<FormModal page= {page}/> :""}
+      <button className="add-btn" onClick={()=>{
+        dispatch(showModal())
+      }}>new data</button>
        <table>
   <thead>
     <tr>
       <th>control</th>
-      <th className="content"> {location.state?.title}</th>
+      <th className="content"> {page}</th>
       <th>name</th>
     </tr>
   </thead>

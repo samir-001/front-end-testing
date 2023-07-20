@@ -337,6 +337,7 @@ a .summary-card__content {
 .modal {
   position: fixed;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -352,6 +353,7 @@ a .summary-card__content {
   border-radius: 12px;
   background-color: white;
   width: 350px;
+  text-align: center;
 }
 .nav {
   position: fixed;
@@ -694,4 +696,20 @@ a .dashBoard__nav-bar__link {
 .form-btn-danger:hover {
   color: white;
   background-color: #7e1f1f;
+}
+
+.add-btn {
+  display: flex;
+  flex-direction: row;
+  padding: 7px;
+  border-radius: 7px;
+  border: 1px solid darkblue;
+  color: darkblue;
+  background-color: transparent;
+  align-self: flex-end;
+  margin-right: 5%;
+}
+.add-btn:hover {
+  background-color: darkblue;
+  color: white;
 }
