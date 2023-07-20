@@ -1,6 +1,6 @@
 .badge{
     display: flex;
-    padding: 5px 7px;
+    padding: 0 7px;
     color:#3AA6B9;
     flex-direction:row;
     align-items: center;
@@ -11,13 +11,15 @@
     box-sizing: border-box;
     
     &__icon{
-        width: 80px;
-        height: 90%;
+        padding: 15px;
         border-radius: 5px;
-    
-        @media screen  and (max-width: 1200px) {
-            display: none;
-        }
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+
+  
 
         
     }

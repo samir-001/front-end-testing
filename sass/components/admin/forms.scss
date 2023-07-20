@@ -37,12 +37,17 @@
 }
 .form-btn{
     margin: auto;
-    font-weight: bold;
     padding: 7px 10px;
     border-radius: 5px;
     border: none;
-    color: white;
-    background-color: #1f6f7e;
+    border: 1px solid darkblue;
+    color:darkblue ;
+    background-color: white;
+    font-size: 18px;
+    &:hover{
+        background-color:darkblue;
+        color:white
+    }
 }
 .form-btn-success{
     margin: 5px;
@@ -76,6 +81,7 @@
 }
 .add-btn{
     display: flex;
+    font-size: 18px;
     flex-direction:row;
     padding: 7px;
     border-radius:7px ;

@@ -75,7 +75,7 @@ a .summary-card__content {
 }
 .badge {
   display: flex;
-  padding: 5px 7px;
+  padding: 0 7px;
   color: #3AA6B9;
   flex-direction: row;
   align-items: center;
@@ -86,14 +86,13 @@ a .summary-card__content {
   box-sizing: border-box;
 }
 .badge__icon {
-  width: 80px;
-  height: 90%;
+  padding: 15px;
   border-radius: 5px;
-}
-@media screen and (max-width: 1200px) {
-  .badge__icon {
-    display: none;
-  }
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
 }
 .badge__content {
   display: flex;
@@ -403,7 +402,7 @@ h3 {
 .nav .links {
   display: none;
   position: relative;
-  background-color: rgba(58, 166, 185, 0.6705882353);
+  background-color: rgba(58, 166, 185, 0.8);
   width: 100%;
   transform: translateX(100%);
 }
@@ -678,12 +677,17 @@ a .dashBoard__nav-bar__link {
 
 .form-btn {
   margin: auto;
-  font-weight: bold;
   padding: 7px 10px;
   border-radius: 5px;
   border: none;
+  border: 1px solid darkblue;
+  color: darkblue;
+  background-color: white;
+  font-size: 18px;
+}
+.form-btn:hover {
+  background-color: darkblue;
   color: white;
-  background-color: #1f6f7e;
 }
 
 .form-btn-success {
@@ -718,6 +722,7 @@ a .dashBoard__nav-bar__link {
 
 .add-btn {
   display: flex;
+  font-size: 18px;
   flex-direction: row;
   padding: 7px;
   border-radius: 7px;

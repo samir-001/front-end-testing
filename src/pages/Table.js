@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom"
 import FormModal from "../components/formModal"
 import { useDispatch, useSelector } from "react-redux"
 import { showModal } from "../reducers/global/global"
+import { BiAddToQueue } from "react-icons/bi";
 
 const Table = ()=>{
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ return(
       {isFormModalopned ?<FormModal page= {page}/> :""}
       <button className="add-btn" onClick={()=>{
         dispatch(showModal())
-      }}>new data</button>
+      }}><span style={{paddingRight:"5px"}}>new data</span><BiAddToQueue /></button>
        <table>
   <thead>
     <tr>

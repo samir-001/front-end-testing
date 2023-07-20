@@ -1,9 +1,16 @@
+import {MdDiscount} from "react-icons/md"
+import {BiMessageRoundedDots} from "react-icons/bi"
+import {FaRegComments} from "react-icons/fa"
+import {AiTwotoneLike,AiOutlineFileWord} from "react-icons/ai"
+import {IoMdGitPullRequest} from "react-icons/io"
+import {TbReportAnalytics} from "react-icons/tb"
+
 const MainDashboard = ()=>{
     const global = {
-        "عدد المقالات":{num:0,color:"#ff6200c0"},
-        "عدد الرسائل":{num:0,color:"#ffae00e1"},
-        "عدد التعليقات":{num:0,color:"#00e0b4b2"},
-        "عدد الاعجابات":{num:0,color:"#00e1ffb4"},
+        "عدد المقالات":{num:0,color:"#ff6200c0",icon:<MdDiscount/>},
+        "عدد الرسائل":{num:0,color:"#ffae00e1" ,icon:<BiMessageRoundedDots/>},
+        "عدد التعليقات":{num:0,color:"#00e0b4b2",icon:<FaRegComments/>},
+        "عدد الاعجابات":{num:0,color:"#00e1ffb4",icon:<AiTwotoneLike/>},
     } 
     const types = {
         "نجدة طوارئ":{num:0,color:"#ff6200c0"},
@@ -12,15 +19,17 @@ const MainDashboard = ()=>{
         "راقام موبايل":{num:0,color:"#00e1ffb4"},
     } 
     const inner ={
-        "طلبات التعديل":{num:0,color:"#ff6200c0"},
-        "كلمات جديدة":{num:0,color:"#ffae00e1"},
-        "البلاغات":{num:0,color:"#00e0b4b2"}
+        "طلبات التعديل":{num:0,color:"#ff6200c0",icon:<IoMdGitPullRequest/>},
+        "كلمات جديدة":{num:0,color:"#ffae00e1",icon:<AiOutlineFileWord/>},
+        "البلاغات":{num:0,color:"#00e0b4b2",icon:<TbReportAnalytics/>}
         
     }
     const requests = Object.keys(inner).map((item ,index)=>{
         return(
             <div key={index}  className=" badge">
-                <div  style={{backgroundColor:inner[item].color}} className="badge__icon"></div>
+                <div  style={{backgroundColor:inner[item].color}} className="badge__icon">
+                {inner[item].icon}
+                </div>
                 <div className="badge__Content">
                     <p className="badge__title">{item}</p>
                     <p className="badge__text">{inner[item].num}</p>
@@ -32,7 +41,9 @@ const MainDashboard = ()=>{
     const statistic = Object.keys(global).map((item ,index)=>{
         return(
             <div  className=" badge">
-                <div key={index} style={{backgroundColor:global[item].color}} className="badge__icon"></div>
+                <div key={index} style={{backgroundColor:global[item].color}} className="badge__icon">
+                {global[item].icon}
+                </div>
                 <div className="badge__Content">
                     <p className="badge__title">{item}</p>
                     <p className="badge__text">{global[item].num}</p>
@@ -55,7 +66,6 @@ const MainDashboard = ()=>{
     })
     return(
         <div className="main-dash-board">
-            <button className="add-btn">اضافة مقال</button>
             <div className="statistic">
                 <h3 className="statistic__title">احصائيات</h3>
                 <div className="statistic__content">

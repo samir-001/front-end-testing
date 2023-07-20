@@ -4,6 +4,9 @@ import { getArticles } from '../reducers/articles/getArticles';
 import { Link } from 'react-router-dom';
 import {data} from "../data"
 import  { intervalToDuration ,format, parseISO} from "date-fns"
+import { FcAlarmClock } from "react-icons/fc";
+import { RiEye2Line } from "react-icons/ri";
+
 const Home = ()=>{
 //   const dispatch = useDispatch()
 
@@ -38,8 +41,8 @@ if(data){
         <div className='summary-card__content'>{String(item.content).slice(0,30)}</div>
       </Link>
         <div className='summary-card__meta'>
-          <div> عدد الزوار : 0</div>
-          <div> منذ : {getDurationSrting()} </div>
+          <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <span>عدد الزوار</span> <RiEye2Line/> : 0</div>
+          <div  style={{display:"flex",justifyContent:"center",alignItems:"center"}}>  {getDurationSrting()}: <FcAlarmClock/> <span>منذ</span>  </div>
         </div>
       </div>
     )
