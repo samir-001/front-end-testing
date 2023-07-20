@@ -55,6 +55,7 @@ const MainDashboard = ()=>{
     })
     return(
         <div className="main-dash-board">
+            <button className="add-btn">اضافة مقال</button>
             <div className="statistic">
                 <h3 className="statistic__title">احصائيات</h3>
                 <div className="statistic__content">

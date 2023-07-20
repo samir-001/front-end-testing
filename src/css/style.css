@@ -45,6 +45,13 @@ a .summary-card__content {
 .article-card:hover {
   background-color: rgba(253, 233, 233, 0.363);
 }
+@media screen and (max-width: 900px) {
+  .article-card {
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+}
 .article-card__title {
   padding-right: 20px;
   font-weight: bold;
@@ -60,6 +67,11 @@ a .summary-card__content {
   position: absolute;
   top: 0;
   left: 15px;
+}
+@media screen and (max-width: 1000px) {
+  .article-card__control {
+    position: static;
+  }
 }
 .badge {
   display: flex;
@@ -352,8 +364,12 @@ a .summary-card__content {
   padding: 30px;
   border-radius: 12px;
   background-color: white;
-  width: 350px;
+  width: 320px;
   text-align: center;
+}
+
+h3 {
+  padding: 20px 0;
 }
 .nav {
   position: fixed;
@@ -486,6 +502,8 @@ td.content, th.content {
 @media screen and (max-width: 1200px) {
   .dashBoard {
     flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
   }
 }
 .dashBoard__nav-bar {
@@ -562,7 +580,7 @@ a .dashBoard__nav-bar__link {
 }
 @media screen and (max-width: 1200px) {
   .dashBoard__content {
-    margin: auto;
+    width: 100%;
   }
 }
 .dashBoard .statistic {

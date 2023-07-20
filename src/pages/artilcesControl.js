@@ -14,6 +14,7 @@ const ArtilcesControl = ()=>{
     const requests = data.map((item ,index)=>{
         return(
             <div key={index} >
+
                 <ArticleCard title={item.title} content={item.content}/>
             </div>
         
@@ -23,7 +24,9 @@ const ArtilcesControl = ()=>{
     return(
 <>
                 <h3 style={{marginBottom:"30px"}} className=""> المقالات</h3>
+
         <div className="main-dash-board">
+                <button style={{marginBottom:"20px"}} className="add-btn">add new</button>
     
                     {requests}
        

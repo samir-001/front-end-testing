@@ -13,7 +13,7 @@ const FormModal = ({page})=>{
     return(
         <div className="modal" onClick={hideModal}>
             <form className="add-Form">
-                 <h3 style={{paddingBottom:"10px"}}>{page} </h3>
+                 <h4 style={{paddingBottom:"10px"}}>{page} </h4>
                 <input className="comment-form__element" type="text"  placeholder={page}/>
                 <button typeof="submit" className="form-btn" onClick={(e)=>{
                     e.preventDefault()
