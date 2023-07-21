@@ -1,7 +1,6 @@
 import { Navigate, useLocation } from "react-router-dom"
 import { Link, Outlet } from "react-router-dom"
 import { useSelector } from "react-redux"
-import FormModal from "../components/formModal"
 const AdminDashboard  = ()=>{
     const location = useLocation()
     const login = useSelector((state)=>state.Auth.login)

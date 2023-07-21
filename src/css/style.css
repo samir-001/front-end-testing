@@ -1,25 +1,24 @@
 .summary-card {
-  border: 1px solid #000;
-  text-align: right;
-  height: 170px;
-  border-radius: 22px;
+  border: 1px solid #5D9C59;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
   color: black;
   position: relative;
   text-align: center;
 }
 a .summary-card__title {
-  padding: 10px;
+  padding: 5px;
   font-weight: bold;
-  font-size: 18px;
-  border-bottom: 1px solid #000;
-  padding-bottom: 10px;
-  border-radius: 22px 22px 0 0;
-  background-color: rgb(235, 230, 233);
-  color: black;
+  font-size: 16px;
+  color: #DF2E38;
 }
 a .summary-card__content {
-  font-size: 16px;
-  padding: 10px;
+  font-size: 14px;
+  padding: 5px;
   color: black;
 }
 .summary-card__meta {
@@ -27,7 +26,7 @@ a .summary-card__content {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 10px;
   bottom: 5px;
 }
 .summary-card__meta div {
@@ -108,7 +107,7 @@ a .summary-card__content {
 }
 .badge__text {
   font-size: 16px;
-  padding: 15px 10px;
+  padding: 10px;
 }
 
 .sky-color {
@@ -245,11 +244,16 @@ a .summary-card__content {
   width: 100%;
   object-fit: cover;
 }
+@font-face {
+  font-family: global;
+  src: url("./ElMessiri-VariableFont_wght.ttf");
+}
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
+  font-family: global;
 }
 
 .report-section {
@@ -258,7 +262,7 @@ a .summary-card__content {
   margin: auto;
   justify-content: center;
   display: grid;
-  gap: 20px;
+  gap: 5px;
   grid-template-columns: repeat(4, 1fr);
 }
 @media screen and (max-width: 1220px) {
@@ -352,6 +356,8 @@ a .summary-card__content {
   justify-content: center;
   align-items: center;
   z-index: 999;
+  padding: 10px;
+  box-sizing: border-box;
   top: 0;
   left: 0;
   width: 100vw;
@@ -403,8 +409,8 @@ h3 {
   display: none;
   position: relative;
   background-color: rgba(58, 166, 185, 0.8);
-  width: 100%;
   transform: translateX(100%);
+  overflow-x: scroll;
 }
 .nav .inner-links {
   display: grid;
@@ -418,7 +424,7 @@ h3 {
   .nav .inner-links {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    overflow-x: scroll;
   }
 }
 .nav .open {
@@ -683,7 +689,7 @@ a .dashBoard__nav-bar__link {
   border: 1px solid darkblue;
   color: darkblue;
   background-color: white;
-  font-size: 16px;
+  font-size: 14px;
 }
 .form-btn:hover {
   background-color: darkblue;
@@ -722,7 +728,7 @@ a .dashBoard__nav-bar__link {
 
 .add-btn {
   display: flex;
-  font-size: 18px;
+  font-size: 16px;
   flex-direction: row;
   padding: 7px;
   border-radius: 7px;

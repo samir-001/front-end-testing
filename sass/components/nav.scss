@@ -36,8 +36,7 @@
         display: none;
         position: relative;
         background-color: #3aa6b9cc;
-        width: 100%;
-        transform: translateX(100%);
+        transform: translateX(100%);     overflow-x: scroll;
 
         
     } 
@@ -51,7 +50,7 @@
         @media screen and (max-width: 1000px) {
             display: flex;
             flex-direction: column;
-            width: 100%;
+            overflow-x: scroll;
           }
     }
     
