@@ -99,12 +99,13 @@
 }
 .modal{
   position: fixed;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 999;
-  padding: 10px;
+  padding: 30px;
   box-sizing: border-box;
   top: 0;
   left: 0;
@@ -113,7 +114,6 @@
   background-color: rgba(0, 0, 0, 0.322);
 }
 .add-Form{
-  padding: 30px;
   border-radius: 12px;
   background-color: white;
   width: 320px;

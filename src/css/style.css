@@ -356,7 +356,7 @@ a .summary-card__content {
   justify-content: center;
   align-items: center;
   z-index: 999;
-  padding: 10px;
+  padding: 30px;
   box-sizing: border-box;
   top: 0;
   left: 0;
@@ -366,7 +366,6 @@ a .summary-card__content {
 }
 
 .add-Form {
-  padding: 30px;
   border-radius: 12px;
   background-color: white;
   width: 320px;
