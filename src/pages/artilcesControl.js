@@ -15,7 +15,7 @@ const ArtilcesControl = ()=>{
 
     const requests = data.map((item ,index)=>{
         return(
-            <div key={index} >
+            <div key={index}>
                 <ArticleCard title={item.title} content={item.content}/>
             </div>
         
